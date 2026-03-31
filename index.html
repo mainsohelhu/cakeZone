@@ -1,160 +1,1029 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Title -->
-    <title>Best Cake Shop in Mathpurena Raipur | Cake Zone Bakery</title>
+  <!-- ===== SEO: Primary Title & Description ===== -->
+  <title>Best Cake Shop in Raipur | Custom Birthday & Wedding Cakes | Cake Zone Mathpurena</title>
+  <meta name="description" content="Cake Zone – Raipur's most loved cake shop in Mathpurena. Order fresh custom birthday cakes, wedding cakes & designer cakes near you. Call or WhatsApp to order now!" />
+  <meta name="keywords" content="cake shop in raipur, cake shop near me, birthday cake raipur, wedding cake raipur, custom cake raipur, best bakery raipur, mathpurena cake shop, designer cake raipur, cake zone raipur, order cake online raipur, fresh cake raipur, cake delivery raipur" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Cake Zone Raipur" />
+  <meta name="geo.region" content="IN-CT" />
+  <meta name="geo.placename" content="Raipur, Chhattisgarh" />
+  <meta name="google-site-verification" content="oS5iHmK61nzn0ODrE_LPbLXI0O73VyJhHY6B_pMTNAA" />
 
-    <!-- Google Verification (DO NOT REMOVE) -->
-    <meta name="google-site-verification" content="oS5iHmK61nzn0ODrE_LPbLXI0O73VyJhHY6B_pMTNAA" />
+  <!-- ===== Open Graph / Social ===== -->
+  <meta property="og:title" content="Best Cake Shop in Raipur | Cake Zone Mathpurena" />
+  <meta property="og:description" content="Order premium birthday, wedding & custom cakes from Cake Zone – Raipur's top-rated bakery in Mathpurena. Fresh. Beautiful. Delicious." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://officialcakezone.netlify.app/" />
+  <meta property="og:locale" content="en_IN" />
 
-    <!-- SEO Description -->
-    <meta name="description"
-        content="Cake Zone is the best cake shop in Mathpurena, Raipur. We specialize in birthday cakes, wedding cakes, and custom premium cakes. Order fresh cakes via WhatsApp today!">
+  <!-- ===== Local Business Schema JSON-LD ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Cake Zone",
+    "description": "Best cake shop in Raipur specializing in custom birthday cakes, wedding cakes, and designer cakes.",
+    "url": "https://officialcakezone.netlify.app/",
+    "telephone": "+91-YOUR-NUMBER",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mathpurena",
+      "addressLocality": "Raipur",
+      "addressRegion": "Chhattisgarh",
+      "postalCode": "492001",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Su 11:00-21:00",
+    "servesCuisine": "Bakery",
+    "priceRange": "₹₹",
+    "sameAs": ["https://instagram.com/cakezone5"]
+  }
+  </script>
 
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Cake Zone">
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Best Cake Shop in Mathpurena Raipur | Cake Zone Bakery">
-    <meta property="og:description" content="Order premium birthday and wedding cakes in Raipur from Cake Zone. Freshly baked daily.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://officialcakezone.netlify.app/">
+  <!-- ===== Favicon — replace favicon.png with your actual logo file ===== -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
 
-    <link rel="stylesheet" href="style.css">
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM – Warm Luxury Patisserie
+    ============================================================ */
+    :root {
+      --cream:    #FDF6EC;
+      --blush:    #F2C4A0;
+      --rose:     #C8614A;
+      --rose-dk:  #A0402E;
+      --choc:     #3B1F14;
+      --gold:     #D4A054;
+      --gold-lt:  #F0D49A;
+      --white:    #FFFDF9;
+      --text:     #2C1A0E;
+      --muted:    #8B6F5E;
+      --radius:   18px;
+      --shadow:   0 8px 40px rgba(59,31,20,0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ---- Scrollbar ---- */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 99px; }
+
+    /* ============================================================
+       HEADER / NAV
+    ============================================================ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 70px;
+      background: rgba(253,246,236,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212,160,84,0.2);
+      transition: box-shadow .3s;
+    }
+    header.scrolled { box-shadow: 0 4px 30px rgba(59,31,20,0.12); }
+
+    .logo {
+      display: flex; align-items: center;
+      height: 100px;
+    }
+    .logo img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+    .logo span { color: var(--gold); }
+
+    nav a {
+      text-decoration: none;
+      color: var(--choc);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 2rem;
+      position: relative;
+      transition: color .25s;
+    }
+    nav a::after {
+      content: '';
+      position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 2px; background: var(--rose);
+      transform: scaleX(0); transition: transform .3s;
+    }
+    nav a:hover { color: var(--rose); }
+    nav a:hover::after { transform: scaleX(1); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .65rem 1.6rem;
+      background: var(--rose);
+      color: var(--white);
+      border: none; border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .9rem; font-weight: 500;
+      cursor: pointer;
+      transition: background .25s, transform .2s, box-shadow .25s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn:hover {
+      background: var(--rose-dk);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200,97,74,0.35);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--choc);
+    }
+    .btn-gold:hover { background: #b8893e; }
+
+    /* hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--choc); border-radius: 2px; transition: .3s; }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed; top: 70px; left: 0; right: 0; z-index: 99;
+      background: var(--cream);
+      padding: 1.5rem 5%;
+      display: flex; flex-direction: column; gap: 1rem;
+      transform: translateY(-120%); opacity: 0;
+      transition: transform .4s cubic-bezier(.4,0,.2,1), opacity .3s;
+      border-bottom: 1px solid rgba(212,160,84,0.2);
+    }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; }
+    .mobile-menu a {
+      text-decoration: none; color: var(--choc);
+      font-size: 1.1rem; font-weight: 500;
+      padding: .5rem 0; border-bottom: 1px solid rgba(212,160,84,0.15);
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      padding: 7rem 5% 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated dough/sprinkle blobs */
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute; border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(242,196,160,0.35) 0%, transparent 70%);
+      top: -100px; right: -150px;
+      animation: blob1 8s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(212,160,84,0.2) 0%, transparent 70%);
+      bottom: 50px; left: -100px;
+      animation: blob2 10s ease-in-out infinite alternate;
+    }
+    @keyframes blob1 { from { transform: translate(0,0) scale(1); } to { transform: translate(30px,20px) scale(1.1); } }
+    @keyframes blob2 { from { transform: translate(0,0) scale(1); } to { transform: translate(-20px,30px) scale(1.08); } }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold-lt);
+      color: var(--rose-dk);
+      font-size: .75rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: .4rem 1.2rem; border-radius: 50px;
+      margin-bottom: 1.2rem;
+      animation: fadeUp .7s .1s both;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.1;
+      color: var(--choc);
+      margin-bottom: 1.2rem;
+      animation: fadeUp .7s .2s both;
+    }
+    .hero h1 em { color: var(--rose); font-style: italic; }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 1.1rem; color: var(--muted); line-height: 1.7;
+      margin-bottom: 2.2rem;
+      animation: fadeUp .7s .3s both;
+    }
+
+    .hero-btns {
+      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+      animation: fadeUp .7s .4s both;
+    }
+
+    /* Floating cakes row */
+    .hero-floats {
+      display: flex; gap: 1.5rem; margin-top: 4rem;
+      animation: fadeUp .7s .5s both;
+    }
+    .float-chip {
+      background: var(--white);
+      border: 1px solid rgba(212,160,84,0.3);
+      border-radius: 50px;
+      padding: .5rem 1.2rem;
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .85rem; font-weight: 500; color: var(--choc);
+      box-shadow: 0 2px 12px rgba(59,31,20,0.08);
+      animation: float 3s ease-in-out infinite;
+    }
+    .float-chip:nth-child(2) { animation-delay: .5s; }
+    .float-chip:nth-child(3) { animation-delay: 1s; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+    /* Stars */
+    .stars { color: var(--gold); font-size: .8rem; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       SECTION COMMON
+    ============================================================ */
+    section { padding: 6rem 5%; }
+    .section-label {
+      display: inline-block;
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--rose); margin-bottom: .7rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--choc); margin-bottom: 1rem; line-height: 1.2;
+    }
+    .section-sub {
+      color: var(--muted); max-width: 540px; line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ============================================================
+       WHY US – STRIPS
+    ============================================================ */
+    .why { background: var(--choc); color: var(--cream); }
+    .why .section-title { color: var(--gold-lt); }
+    .why .section-label { color: var(--gold); }
+    .why .section-sub { color: rgba(253,246,236,0.65); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .why-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,160,84,0.2);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      transition: background .3s, transform .3s;
+    }
+    .why-card:hover { background: rgba(212,160,84,0.1); transform: translateY(-4px); }
+    .why-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: .5rem; color: var(--gold-lt); }
+    .why-card p { font-size: .9rem; color: rgba(253,246,236,0.65); line-height: 1.6; }
+
+    /* ============================================================
+       CAKE CATEGORIES
+    ============================================================ */
+    .categories { background: var(--white); }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .cat-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--cream);
+      border: 1px solid rgba(212,160,84,0.2);
+      box-shadow: var(--shadow);
+      transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s;
+      cursor: pointer;
+    }
+    .cat-card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 60px rgba(59,31,20,0.18); }
+
+    .cat-img {
+      width: 100%; height: 220px; object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, var(--blush), var(--gold-lt));
+      transition: transform .5s;
+    }
+    .cat-card:hover .cat-img { transform: scale(1.06); }
+    .cat-body { padding: 1.5rem; }
+    .cat-tag {
+      font-size: .7rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--rose);
+      margin-bottom: .5rem;
+    }
+    .cat-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; margin-bottom: .5rem; color: var(--choc);
+    }
+    .cat-body p { font-size: .88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+    .cat-price { font-size: 1.1rem; font-weight: 600; color: var(--rose); }
+
+    /* ============================================================
+       OCCASIONS
+    ============================================================ */
+    .occasions { background: var(--cream); }
+    .occ-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .occ-item {
+      background: var(--white);
+      border: 1px solid rgba(212,160,84,0.2);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: all .3s;
+    }
+    .occ-item:hover { background: var(--rose); color: var(--white); transform: translateY(-4px); }
+    .occ-item:hover .occ-name { color: var(--white); }
+    .occ-emoji { font-size: 2rem; margin-bottom: .7rem; }
+    .occ-name { font-size: .9rem; font-weight: 500; color: var(--choc); }
+
+    /* ============================================================
+       PROCESS
+    ============================================================ */
+    .process { background: var(--white); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+    .step {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .step-num {
+      width: 56px; height: 56px;
+      background: var(--rose);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 16px rgba(200,97,74,0.35);
+    }
+    .step h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: .5rem; color: var(--choc); }
+    .step p { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials { background: var(--cream); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .testi-card {
+      background: var(--white);
+      border: 1px solid rgba(212,160,84,0.2);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+      transition: transform .3s;
+    }
+    .testi-card:hover { transform: translateY(-4px); }
+    .testi-stars { color: var(--gold); margin-bottom: .8rem; font-size: 1rem; }
+    .testi-text { font-size: .92rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: .8rem; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--blush);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    .testi-name { font-weight: 600; font-size: .9rem; color: var(--choc); }
+    .testi-loc { font-size: .78rem; color: var(--muted); }
+
+    /* ============================================================
+       MAP + ABOUT
+    ============================================================ */
+    .about { background: var(--white); }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-info .section-title { margin-bottom: 1rem; }
+    .about-info p { color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+    .info-pills {
+      display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem;
+    }
+    .info-pill {
+      background: var(--cream);
+      border: 1px solid rgba(212,160,84,0.3);
+      border-radius: 50px;
+      padding: .5rem 1.2rem;
+      font-size: .85rem; font-weight: 500; color: var(--choc);
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .map-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(212,160,84,0.2);
+    }
+    .map-wrap iframe { display: block; }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq { background: var(--cream); }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid rgba(212,160,84,0.2);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      background: var(--white);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; padding: 1.2rem 1.5rem;
+      background: none; border: none;
+      text-align: left; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .98rem; font-weight: 600; color: var(--choc);
+      display: flex; justify-content: space-between; align-items: center;
+      transition: color .2s;
+    }
+    .faq-q:hover { color: var(--rose); }
+    .faq-arrow { font-size: 1.2rem; transition: transform .3s; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .4s cubic-bezier(.4,0,.2,1), padding .3s;
+      font-size: .9rem; color: var(--muted); line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.2rem; }
+
+    /* ============================================================
+       CTA BANNER
+    ============================================================ */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dk) 100%);
+      text-align: center; padding: 5rem 5%;
+      position: relative; overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '🎂';
+      position: absolute; font-size: 10rem;
+      opacity: .07; right: 5%; top: 50%;
+      transform: translateY(-50%);
+    }
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white); margin-bottom: .8rem;
+    }
+    .cta-banner p { color: rgba(255,255,255,0.75); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--choc);
+      color: rgba(253,246,236,0.7);
+      padding: 4rem 5% 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand .logo { color: var(--gold); font-size: 1.6rem; display: block; margin-bottom: 1rem; }
+    .footer-brand p { font-size: .9rem; line-height: 1.7; max-width: 260px; }
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-lt); margin-bottom: 1.2rem; font-size: 1rem;
+    }
+    .footer-col a {
+      display: block; text-decoration: none;
+      color: rgba(253,246,236,0.6);
+      font-size: .88rem; margin-bottom: .6rem;
+      transition: color .2s;
+    }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(212,160,84,0.15);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .82rem; flex-wrap: wrap; gap: .5rem;
+    }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+    /* Social icons */
+    .social-row { display: flex; gap: .8rem; margin-top: 1.2rem; }
+    .social-btn {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(212,160,84,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 1.1rem;
+      text-decoration: none;
+      transition: background .25s, transform .2s;
+    }
+    .social-btn:hover { background: var(--gold); color: var(--choc); transform: translateY(-3px); }
+
+    /* ============================================================
+       FLOATING WHATSAPP
+    ============================================================ */
+    .wa-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      cursor: pointer;
+      text-decoration: none;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    .wa-fab svg { width: 30px; height: 30px; fill: white; }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+      50% { box-shadow: 0 6px 36px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.1); }
+    }
+
+    /* ============================================================
+       REVEAL ANIMATION
+    ============================================================ */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity .7s, transform .7s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .about-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-floats { flex-wrap: wrap; justify-content: center; }
+    }
+    @media (max-width: 520px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-        <div class="logo">Cake Zone</div>
+<!-- ===================== HEADER ===================== -->
+<header id="mainHeader">
+  <div class="logo"><img src="Cake Zone Bakery logo design.png" alt="Cake Zone – Best Cake Shop in Raipur" /></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#cakes">Cakes</a>
+    <a href="#occasions">Occasions</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a class="btn wa-link" href="https://wa.me/917999545499?text=Hi%20Cake%20Zone!%20I%20want%20to%20order%20a%20cake." target="_blank">🎂 Order Now</a>
+  </nav>
+  <div class="hamburger" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</header>
 
-        <nav class="desktop-nav">
-            <a href="#home">Home</a>
-            <a href="#cakes">Cakes</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <button class="btn-primary whatsapp-trigger">Order Now</button>
-        </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#cakes">Our Cakes</a>
+  <a href="#occasions">Occasions</a>
+  <a href="#about">About Us</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a class="btn" href="https://wa.me/917999545499" target="_blank">🎂 Order on WhatsApp</a>
+</div>
 
-        <div class="hamburger" id="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero">
+  <div class="hero-badge">⭐ Raipur's Most Loved Cake Shop</div>
+  <h1>Every Celebration Deserves a <em>Masterpiece</em></h1>
+  <p>Welcome to Cake Zone — Mathpurena, Raipur's premier cake studio. We handcraft custom birthday cakes, wedding cakes, and designer cakes with love, passion, and the finest ingredients.</p>
+  <div class="hero-btns">
+    <a class="btn" href="https://wa.me/917999545499?text=Hi!%20I%20want%20to%20order%20a%20cake." target="_blank">📱 Order on WhatsApp</a>
+    <a class="btn btn-gold" href="#cakes">Explore Cakes</a>
+  </div>
+  <div class="hero-floats">
+    <div class="float-chip">🎂 Birthday Cakes</div>
+    <div class="float-chip">💍 Wedding Cakes</div>
+    <div class="float-chip">✨ Custom Designs</div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section class="why reveal">
+  <p class="section-label">Why Raipur Chooses Us</p>
+  <h2 class="section-title">The Cake Zone Difference</h2>
+  <p class="section-sub">We don't just bake cakes — we craft edible memories. Here's why thousands of families in Raipur trust us for every celebration.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🌿</div>
+      <h3>Fresh Ingredients Daily</h3>
+      <p>Only the finest, freshest ingredients go into every cake we make. No preservatives, no compromise.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🎨</div>
+      <h3>Custom Designs</h3>
+      <p>Share your vision and we'll create a cake that's uniquely yours — photo cakes, theme cakes, 3D cakes.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <h3>Quick WhatsApp Orders</h3>
+      <p>Order in minutes via WhatsApp. Easy, fast, and reliable — no app needed.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">❤️</div>
+      <h3>Made with Love</h3>
+      <p>Every cake is baked with genuine passion and care. That's what makes the difference in taste.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CAKE CATEGORIES ===================== -->
+<section id="cakes" class="categories reveal">
+  <p class="section-label">Our Creations</p>
+  <h2 class="section-title">Signature Cake Collection</h2>
+  <p class="section-sub">From delicate fondant art to rich cream sculptures — browse our most popular cakes loved by Raipur's families.</p>
+  <div class="cat-grid">
+
+    <div class="cat-card">
+      <img src="Untitled design/1.svg" alt="Birthday Cake – Cake Zone Raipur" class="cat-img">
+      <div class="cat-body">
+        <div class="cat-tag">Birthday</div>
+        <h3>Birthday Bliss Cakes</h3>
+        <p>Stunning custom birthday cakes in any flavor, design, or theme. Make their day unforgettable with a cake crafted just for them.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="cat-price">Starting ₹499</span>
+          <a class="btn" href="https://wa.me/917999545499?text=I%20want%20a%20Birthday%20Cake" target="_blank">Order Now</a>
         </div>
-    </header>
-
-    <div class="menu-overlay" id="overlay"></div>
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#home" class="menu-link">Home</a>
-        <a href="#cakes" class="menu-link">Cakes</a>
-        <a href="#about" class="menu-link">About</a>
-        <a href="#contact" class="menu-link">Contact</a>
-        <button class="btn-primary whatsapp-trigger">Order Now</button>
+      </div>
     </div>
 
-    <section id="home" class="hero">
-        <h1>Wellcome to CakeZone</h1>
-        <p>Handcrafted premium cakes for every celebration in Mathpurena Raipur. Experience the art of baking with Cake Zone.
-        </p>
-        <button class="btn-primary whatsapp-trigger">Order on WhatsApp</button>
-    </section>
-
-    <section id="cakes" class="featured">
-        <h2 class="section-title">Our Signature Creations</h2>
-
-        <div class="grid-container">
-            <div class="card">
-                <img src="/Untitled design/1.jpg" alt="Birthday Cake" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Birthday Bliss</h3>
-                    <p class="card-desc">Custom designs to make your special day unforgettable.</p>
-                    <button class="btn-primary whatsapp-trigger">Order Now</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/Untitled design/2.jpg" alt="Wedding Cake" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Wedding Elegance</h3>
-                    <p class="card-desc">Multi-tier masterpieces for your perfect moment.</p>
-                    <button class="btn-primary whatsapp-trigger">Order Now</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/Untitled design/3.jpg" alt="Cupcakes" class="card-img">
-                <div class="card-content">
-                    <h3 class="card-title">Gourmet Treats</h3>
-                    <p class="card-desc">Cupcakes, pastries, and savory delights.</p>
-                    <button class="btn-primary whatsapp-trigger">Order Now</button>
-                </div>
-            </div>
+    <div class="cat-card">
+      <img src="Untitled design/2.svg" alt="Wedding Cake – Cake Zone Raipur" class="cat-img">
+      <div class="cat-body">
+        <div class="cat-tag">Wedding</div>
+        <h3>Wedding Elegance Cakes</h3>
+        <p>Multi-tier, intricately designed wedding cakes that match the grandeur of your special day. A centerpiece worth remembering.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="cat-price">Starting ₹1,999</span>
+          <a class="btn" href="https://wa.me/917999545499?text=I%20want%20a%20Wedding%20Cake" target="_blank">Order Now</a>
         </div>
-    </section>
-    <div style="margin-top:40px;border-radius:20px;overflow:hidden;">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.207020701029!2d81.632563!3d21.212353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd001436eaf3%3A0x3c64ed167f228400!2sCake%20Zone!5e0!3m2!1sen!2sin!4v1701582390000!5m2!1sen!2sin"
-            width="100%" height="350" style="border:0;" loading="lazy" allowfullscreen>
-        </iframe>
+      </div>
     </div>
 
+    <div class="cat-card">
+      <img src="Untitled design/Romantic anniversary photo cake design.avif" alt="Photo & Theme Cake – Cake Zone Raipur" class="cat-img">
+      <div class="cat-body">
+        <div class="cat-tag">Photo & Theme</div>
+        <h3>Photo & Theme Cakes</h3>
+        <p>Print your favorite memory on a delicious cake. Perfect for anniversaries, retirements, baby showers, and more.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="cat-price">Starting ₹699</span>
+          <a class="btn" href="https://wa.me/917999545499?text=I%20want%20a%20Photo%20Cake" target="_blank">Order Now</a>
+        </div>
+      </div>
     </div>
 
-
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <h2 class="section-title">The Cake Zone Story</h2>
-            <p class="about-text">Located in the heart of Mathpurena, Raipur, we believe every celebration deserves a
-                masterpiece. Our bakers blend passion with premium, fresh ingredients to craft cakes that look
-                spectacular and taste divine.</p>
-
-            <div class="contact-cards">
-                <div class="info-card">
-                    <div class="icon">📍</div>
-                    <h4>Visit Us</h4>
-                    <p>Cake Zone Bakery<br>Mathpurena, Raipur<br>Chhattisgarh, India</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="icon">🕒</div>
-                    <h4>Opening Hours</h4>
-                    <p>Mon - Sun: 11:00 AM - 09:00 PM<br>Fresh bakes daily!</p>
-                </div>
-            </div>
+    <div class="cat-card">
+      <img src="Untitled design/3.svg" alt="Cupcakes & Pastries – Cake Zone Raipur" class="cat-img">
+      <div class="cat-body">
+        <div class="cat-tag">Cupcakes & Pastries</div>
+        <h3>Gourmet Treats</h3>
+        <p>Premium cupcakes, pastries, and sweet treats perfect for gifting, parties, or a personal indulgence.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="cat-price">Starting ₹49/pc</span>
+          <a class="btn" href="https://wa.me/917999545499?text=I%20want%20Cupcakes" target="_blank">Order Now</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <footer id="contact" class="premium-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Cake Zone</h3>
-                <p>Baking memories in Mathpurena.</p>
-
-                <div class="social-links">
-                    <a href="https://instagram.com/cakezone5" target="_blank" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-action">
-                <button class="btn-primary whatsapp-trigger">Message on WhatsApp</button>
-            </div>
+    <div class="cat-card">
+      <img src="Untitled design/ChatGPT Image Mar 31, 2026, 12_48_25 PM.avif" alt="Anniversary Cake – Cake Zone Raipur" class="cat-img">
+      <div class="cat-body">
+        <div class="cat-tag">Anniversary</div>
+        <h3>Anniversary Special</h3>
+        <p>Celebrate your love with a beautifully crafted cake. Roses, heart toppers, gold drip — make it romantic.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="cat-price">Starting ₹799</span>
+          <a class="btn" href="https://wa.me/917999545499?text=I%20want%20an%20Anniversary%20Cake" target="_blank">Order Now</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Cake Zone. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <div class="cat-card">
+      <img src="Untitled design/Elegant pastel wedding cake design.avif" alt="Designer 3D Fondant Cake – Cake Zone Raipur" class="cat-img">
+      <div class="cat-body">
+        <div class="cat-tag">Fondant & 3D</div>
+        <h3>Designer 3D Cakes</h3>
+        <p>Incredible sculpted fondant cakes in any shape — cars, cartoon characters, handbags, anything you dream of.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="cat-price">Starting ₹1,499</span>
+          <a class="btn" href="https://wa.me/917999545499?text=I%20want%20a%203D%20Cake" target="_blank">Order Now</a>
         </div>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== OCCASIONS ===================== -->
+<section id="occasions" class="occasions reveal">
+  <p class="section-label">Every Moment Matters</p>
+  <h2 class="section-title">We Bake for Every Occasion</h2>
+  <p class="section-sub">Whatever the celebration, Cake Zone has the perfect cake for it. We've baked joy into thousands of special moments in Raipur.</p>
+  <div class="occ-grid">
+    <div class="occ-item"><div class="occ-emoji">🎂</div><div class="occ-name">Birthday</div></div>
+    <div class="occ-item"><div class="occ-emoji">💍</div><div class="occ-name">Wedding</div></div>
+    <div class="occ-item"><div class="occ-emoji">❤️</div><div class="occ-name">Anniversary</div></div>
+    <div class="occ-item"><div class="occ-emoji">👶</div><div class="occ-name">Baby Shower</div></div>
+    <div class="occ-item"><div class="occ-emoji">🎓</div><div class="occ-name">Graduation</div></div>
+    <div class="occ-item"><div class="occ-emoji">🕌</div><div class="occ-name">Festivals</div></div>
+    <div class="occ-item"><div class="occ-emoji">🏢</div><div class="occ-name">Corporate</div></div>
+    <div class="occ-item"><div class="occ-emoji">🎉</div><div class="occ-name">Surprise Party</div></div>
+  </div>
+</section>
+
+<!-- ===================== HOW TO ORDER ===================== -->
+<section class="process reveal">
+  <p class="section-label">It's Simple</p>
+  <h2 class="section-title" style="text-align:center;">How to Order Your Cake</h2>
+  <p class="section-sub" style="text-align:center; margin-left:auto; margin-right:auto;">Getting your dream cake delivered in Raipur is just 4 easy steps away.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>WhatsApp Us</h3>
+      <p>Send us a message on WhatsApp with your cake requirement — flavor, design, size, and date needed.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Get a Quote</h3>
+      <p>We'll share pricing and confirm availability within minutes. No hidden charges, ever.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Confirm & Pay</h3>
+      <p>Confirm your order with a small advance via UPI, GPay, or PhonePe. Simple and secure.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Pick Up & Celebrate!</h3>
+      <p>Collect your fresh, stunning cake from our shop in Mathpurena and make your celebration magical.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:3rem;">
+    <a class="btn" href="https://wa.me/917999545499?text=Hi%20Cake%20Zone!%20I%20want%20to%20order%20a%20cake." target="_blank">📱 Start Order on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials reveal">
+  <p class="section-label">Customer Love</p>
+  <h2 class="section-title">What Raipur Says About Us</h2>
+  <p class="section-sub">Real stories from real customers who made their moments sweet with Cake Zone.</p>
+  <div class="testi-grid">
+
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Absolutely the best cake shop near me in Raipur! My daughter's birthday cake was stunning — exactly what I described. Will always order from Cake Zone."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
+        <div>
+          <div class="testi-name">Priya Sharma</div>
+          <div class="testi-loc">Mathpurena, Raipur</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Ordered a 3-tier wedding cake and it was beyond our expectations. Beautiful, fresh, and the taste was divine. Everyone at the wedding was asking where we got it!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨</div>
+        <div>
+          <div class="testi-name">Rahul Verma</div>
+          <div class="testi-loc">Raipur, CG</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Best custom cake in Raipur! I sent them a reference image on WhatsApp and they made it perfectly. Super responsive and professional. Highly recommend!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
+        <div>
+          <div class="testi-name">Ankita Mishra</div>
+          <div class="testi-loc">Raipur, CG</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== ABOUT + MAP ===================== -->
+<section id="about" class="about reveal">
+  <div class="about-layout">
+    <div class="about-info">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">The Cake Zone Story</h2>
+      <p>Located in the heart of Mathpurena, Raipur, Cake Zone was born from a simple belief — <strong>every celebration deserves a masterpiece.</strong> We started with a passion for baking and a commitment to quality that has never wavered.</p>
+      <p>Today, we are proud to be one of the most trusted and loved cake shops in Raipur. From intimate birthday gatherings to grand weddings, we've had the privilege of being a part of thousands of joyful moments.</p>
+      <div class="info-pills">
+        <div class="info-pill">📍 Mathpurena, Raipur</div>
+        <div class="info-pill">🕐 11 AM – 9 PM, Daily</div>
+        <div class="info-pill">📞 WhatsApp Orders</div>
+        <div class="info-pill">🎂 1000+ Happy Customers</div>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.207020701029!2d81.632563!3d21.212353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd001436eaf3%3A0x3c64ed167f228400!2sCake%20Zone!5e0!3m2!1sen!2sin!4v1701582390000!5m2!1sen!2sin"
+        width="100%" height="350" style="border:0;" loading="lazy" allowfullscreen
+        title="Cake Zone location in Mathpurena Raipur">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="faq reveal">
+  <p class="section-label" style="text-align:center;">Got Questions?</p>
+  <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
+  <p class="section-sub" style="text-align:center; margin: 0 auto 3rem;">Everything you need to know about ordering a cake from Cake Zone in Raipur.</p>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q">How do I order a cake from Cake Zone? <span class="faq-arrow">+</span></button>
+      <div class="faq-a">It's easy! Just click the "Order on WhatsApp" button, send us your requirements — flavor, size, design, and date — and we'll get back to you quickly with a quote.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How far in advance should I order? <span class="faq-arrow">+</span></button>
+      <div class="faq-a">We recommend placing your order at least 2–3 days in advance. For large or highly customized cakes like wedding cakes or 3D cakes, 5–7 days is ideal to ensure perfection.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do you make eggless cakes? <span class="faq-arrow">+</span></button>
+      <div class="faq-a">Yes! We offer a wide range of delicious eggless cake options. Just mention your preference when placing your order and we'll take care of the rest.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Which areas in Raipur do you serve? <span class="faq-arrow">+</span></button>
+      <div class="faq-a">Our shop is located in Mathpurena, Raipur. Customers from all across Raipur visit us to pick up their cakes. Please WhatsApp us to confirm availability for your area.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can I get a custom photo or theme cake? <span class="faq-arrow">+</span></button>
+      <div class="faq-a">Absolutely! Photo cakes, cartoon cakes, sports themes, movie characters — we love creating unique cakes. Share your idea or reference image on WhatsApp and we'll make it happen.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">What are your opening hours? <span class="faq-arrow">+</span></button>
+      <div class="faq-a">We are open Monday to Sunday, 11:00 AM to 9:00 PM. We bake fresh every single day!</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CTA BANNER ===================== -->
+<section class="cta-banner reveal">
+  <h2>Ready to Order the Perfect Cake?</h2>
+  <p>Place your order in just 2 minutes on WhatsApp. The best cake shop in Raipur is just one message away!</p>
+  <a class="btn btn-gold" href="https://wa.me/917999545499?text=Hi%20Cake%20Zone!%20I%20want%20to%20order%20a%20cake." target="_blank">📱 WhatsApp Us Now</a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo"><img src="Cake Zone Bakery logo design.png" alt="Cake Zone Raipur" /></span>
+      <p>Raipur's most loved cake shop, crafting edible masterpieces in Mathpurena since day one. Every cake is baked fresh with love.</p>
+      <div class="social-row">
+        <a href="https://instagram.com/cakezone5" target="_blank" class="social-btn" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://wa.me/917999545499" target="_blank" class="social-btn" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.306A9.956 9.956 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#cakes">Our Cakes</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#about">About Us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <a href="https://wa.me/917999545499" target="_blank">📱 WhatsApp Order</a>
+      <a href="https://instagram.com/cakezone5" target="_blank">📸 @cakezone5</a>
+      <a href="#about">📍 Mathpurena, Raipur</a>
+      <a href="#about">🕐 11 AM – 9 PM Daily</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Cake Zone, Raipur. All Rights Reserved.</span>
+    <span>Best Cake Shop in Raipur | <a href="#home">Cake Zone Mathpurena</a></span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-fab" href="https://wa.me/917999545499?text=Hi%20Cake%20Zone!%20I%20want%20to%20order%20a%20cake." target="_blank" aria-label="Order cake on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.306A9.956 9.956 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+</a>
+
+<script>
+  // ---- Sticky header shadow ----
+  const header = document.getElementById('mainHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ---- Hamburger ----
+  const ham = document.getElementById('ham');
+  const mob = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    mob.classList.toggle('open');
+    const bars = ham.querySelectorAll('span');
+    if (mob.classList.contains('open')) {
+      bars[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+      bars[1].style.opacity = '0';
+      bars[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+    } else {
+      bars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+    }
+  });
+  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mob.classList.remove('open');
+    ham.querySelectorAll('span').forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+  }));
+
+  // ---- Scroll reveal ----
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ---- FAQ Accordion ----
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
 </body>
-
 </html>
